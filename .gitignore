@@ -1,2 +1,14 @@
-Pipfile.lock
-.idea/
+**/Pipfile.lock
+**/.idea/
+**/__pycache__/
+**/*.py[cod]
+**/pip-log.txt
+**/*.log
+**/db.sqlite3
+**/db.sqlite3-journal
+**/.venv
+**/env/
+**/venv/
+**/ENV/
+**/env.bak/
+**/venv.bak/
