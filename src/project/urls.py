@@ -13,13 +13,13 @@ def view_name(r):
         return HttpResponse(f.read())
 
 def view_picture(u):
-    picture = here.parent.parent / "img.png"
+    picture = here.parent.parent / "img1.png"
     with picture.open("rb") as f:
         return HttpResponse(f.read(), content_type="image/jpeg")
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('my_name/', view_name),
-    path('me/', view_picture)
+    path('', view_name),
+    path('img1/', view_picture)
 ]
