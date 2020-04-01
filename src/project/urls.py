@@ -7,19 +7,23 @@ from django.urls import path
 here = Path(__file__).parent.resolve()
 
 
-def view_name(r):
-    index = here.parent.parent / "index.html"
-    with index.open() as f:
-        return HttpResponse(f.read())
+def read_static(file, content_type):
+    with file.open() as f:
+        return HttpResponse(f.read(), content_type)
+
+
+def view_list(r):
+    name = here.parent.parent / "index.html"
+    return read_static(name, content_type=None)
+
 
 def view_picture(u):
-    picture = here.parent.parent / "img1.png"
-    with picture.open("rb") as f:
-        return HttpResponse(f.read(), content_type="image/jpeg")
+    name = here.parent.parent / "img1.png"
+    return read_static(name, content_type="image/jpeg")
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', view_name),
-    path('img1/', view_picture)
+    path('', view_list),
+    path('img1/', view_picture),
 ]
