@@ -13,23 +13,19 @@ def read_static(file, content_type):
 
 
 def view_list(r):
-#    name = here.parent.parent / "index.html"
-    return read_static(here.parent.parent / "index.html", content_type=None)
+    return read_static(here.parent.parent / "index.html", None)
 
 
 def view_picture(r):
-#    name = here.parent.parent / "DSC_0031.png"
-    return read_static(here.parent.parent / "DSC_0031.png", content_type="image/jpeg")
+    return read_static(here.parent.parent / "DSC_0031.png", "image/jpeg")
 
 
 def view_picture2(r):
-#    name = here.parent.parent / "DSC_0031.png"
-    return read_static(here.parent.parent / "our_family.png", content_type="image/jpeg")
+    return read_static(here.parent.parent / "our_family.png", "image/jpeg")
 
 
 def view_resume(r):
-#    name = here.parent.parent / "DSC_0031.png"
-    return read_static(here.parent.parent / "Resume.html", content_type=None)
+    return read_static(here.parent.parent / "Resume.html", None)
 
 
 urlpatterns = [
