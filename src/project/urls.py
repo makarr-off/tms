@@ -1,8 +1,11 @@
 from pathlib import Path
 
 from django.contrib import admin
+from django.http import HttpRequest
 from django.http import HttpResponse
 from django.urls import path
+from django.shortcuts import render
+
 
 here = Path(__file__).parent.resolve()
 
@@ -11,9 +14,11 @@ def read_static(file, content_type):
     with file.open("rb") as f:
         return HttpResponse(f.read(), content_type)
 
+#def view_resume(request: HttpRequest) -> HttpResponse:
+ #   return render(request, "resume.html")
 
-def view_list(r):
-    return read_static(here.parent.parent / "index.html", None)
+def view_list(request: HttpRequest) -> HttpResponse:
+    return render(request, "index.html")
 
 
 def view_picture(r):
@@ -24,8 +29,8 @@ def view_picture2(r):
     return read_static(here.parent.parent / "our_family.png", "image/jpeg")
 
 
-def view_resume(r):
-    return read_static(here.parent.parent / "Resume.html", None)
+def view_resume(request: HttpRequest) -> HttpResponse:
+    return render(request, "Resume.html")
 
 
 urlpatterns = [

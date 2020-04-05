@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body bgcolor=00ff00>
+    <font color=ff0000 size="5">
+        <h1>{% block header %}{% endblock %}</h1>
+    </font>
+
+    <main>
+        {% block main %}{% endblock %}
+    </main>
+</body>
+</html>
