@@ -14,8 +14,6 @@ def read_static(file, content_type):
     with file.open("rb") as f:
         return HttpResponse(f.read(), content_type)
 
-#def view_resume(request: HttpRequest) -> HttpResponse:
- #   return render(request, "resume.html")
 
 def view_list(request: HttpRequest) -> HttpResponse:
     return render(request, "index.html")
