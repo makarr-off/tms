@@ -1,3 +1,4 @@
+from os import getenv
 from pathlib import Path
 
 PROJECT_DIR = Path(__file__).parent.resolve()
@@ -6,7 +7,7 @@ REPO_DIR = BASE_DIR.parent.resolve()
 
 SECRET_KEY = 'r%adu$%#aaaob)k8w%15hdo$08n&&x3w_ecyd&jn&@!dq#5oo*'
 
-DEBUG = 0
+DEBUG = getenv("DJANGO_DEBUG", "") == "TRUE"
 
 ALLOWED_HOSTS = [
         "127.0.0.1",
