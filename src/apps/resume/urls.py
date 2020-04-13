@@ -1,7 +1,7 @@
 from django.urls import path
 
-from apps.resume.views import view_resume
+from apps.resume.views import IndexView
 
 urlpatterns = [
-    path('', view_resume),
+    path('', IndexView.as_view(), name="resume"),
 ]

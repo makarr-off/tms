@@ -1,6 +1,4 @@
-from django.http import HttpRequest, HttpResponse
-from django.shortcuts import render
+from django.views.generic import TemplateView
 
-
-def view_resume(request: HttpRequest) -> HttpResponse:
-    return render(request, "resume/Resume.html")
+class IndexView(TemplateView):
+     template_name = "resume/index.html"

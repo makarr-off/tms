@@ -4,10 +4,11 @@
 
 <head>
     <title>{% block title %}{% endblock %}</title>
+    <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css">
 </head>
 
-<body bgcolor=00ff00>
-    <font color=ff0000 size="5">
+<body>
+    <font>
         <h1>{% block header %}{% endblock %}</h1>
     </font>
     <hr>

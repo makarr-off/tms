@@ -6,3 +6,9 @@ verify_ssl = true
 [packages]
 django = "*"
 whitenoise = "*"
+dj-database-url = "*"
+dynaconf = {extras = ["yaml"],version = "*"}
+psycopg2-binary = "*"
+
+[dev-packages]
+httpie = "*"
