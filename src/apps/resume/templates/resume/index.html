@@ -7,8 +7,18 @@
 
 {% block main %}
 
-        <div>
-            <p><a href=https://jobs.tut.by/resume/30663c9fff00d20e000039ed1f7a6e4c626843>Here it is!</a></p>
-        </div>
+    <article>
+        <p>I’m studying on software development using Python.</p>
+    </article>
+
+    <h2>Employment history</h2>
+
+    {% for project in object_list %}
+        <article>
+            <h3>{{ project.started_at }}🔥 till {{ project.finished_at }}</h3>
+        </article>
+        <p>{{ project.summary }}</p>
+
+    {% endfor %}
 
 {% endblock %}

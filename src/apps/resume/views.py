@@ -1,4 +1,8 @@
-from django.views.generic import TemplateView
+from django.views.generic import ListView
 
-class IndexView(TemplateView):
-     template_name = "resume/index.html"
+from apps.resume.models import Project, Technology, Responsibility
+
+
+class IndexView(ListView):
+    template_name = "resume/index.html"
+    queryset = Project.objects.filter()
