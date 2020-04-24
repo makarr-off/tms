@@ -11,6 +11,11 @@ run: static
 runa: static
 	PYTHONPATH="${HERE}/src" pipenv run uvicorn project.asgi:application
 
+migrations:
+	pipenv run python src/manage.py makemigrations
+
+migrate:
+	pipenv run python src/manage.py migrate
 
 static:
 	DJANGO_DEBUG=TRUE pipenv run python src/manage.py collectstatic --noinput --clear -v0
