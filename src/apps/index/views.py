@@ -6,12 +6,13 @@ from apps.index.models import UserInfo
 class IndexView(ListView):
     template_name = "index/index.html"
     model = UserInfo
- #   queryset = UserInfo.objects.filter()
 
-  #  def get_context_data(self, **kwargs):
-   #     ctx = super().get_context_data(**kwargs)
+    def get_context_data(self, **kwargs):
+        parent_ctx = super().get_context_data(**kwargs)
 
-    #    info = UserInfo.objects.first()
-     #   ctx["index"] = info
+        info = UserInfo.objects.first()
+        ctx = {'title': info.title, 'name': info.name, 'greeting': info.greeting}
 
-      #  return ctx
+        ctx.update(parent_ctx)
+
+        return ctx
