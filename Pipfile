@@ -11,4 +11,13 @@ dynaconf = {extras = ["yaml"],version = "*"}
 psycopg2-binary = "*"
 
 [dev-packages]
+black = "==19.10b0"
+codecov = "*"
+coverage = "*"
+django-silk = "*"
+freezegun = "*"
 httpie = "*"
+ipython = "*"
+isort = "*"
+line-profiler = "*"
+pudb = "*"
