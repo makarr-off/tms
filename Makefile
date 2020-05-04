@@ -126,6 +126,7 @@ resetdb:
 	psql ${PSQL_PARAMS} \
 		--dbname=postgres \
 		--echo-all \
+		--file=${HERE}/ddl/reset_db.sql \
 		--no-psqlrc \
 		--no-readline \
 
