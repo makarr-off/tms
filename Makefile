@@ -86,9 +86,6 @@ test:
 			project \
 
 	${RUN} coverage report
-	${RUN} isort --virtual-env ${VENV} --recursive --check-only ${HERE}
-	${RUN} black --check ${HERE}
-
 
 .PHONY: report
 report:
