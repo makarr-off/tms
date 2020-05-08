@@ -11,8 +11,10 @@ class IndexView(ListView):
         parent_ctx = super().get_context_data(**kwargs)
 
         info = UserInfo.objects.first()
-        ctx = {'title': info.title, 'name': info.name, 'greeting': info.greeting}
-
-        ctx.update(parent_ctx)
+        if info is not None:
+            ctx = {'title': info.title, 'name': info.name, 'greeting': info.greeting}
+            ctx.update(parent_ctx)
+        else:
+            ctx = parent_ctx
 
         return ctx
