@@ -17,5 +17,7 @@ class Project(m.Model):
 
 
 class Responsibility(m.Model):
-    project = m.ForeignKey(Project, on_delete=m.CASCADE, related_name="responsibilities")
+    project = m.ForeignKey(
+        Project, on_delete=m.CASCADE, related_name="responsibilities"
+    )
     summary = m.TextField()

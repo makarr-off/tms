@@ -1,8 +1,9 @@
 from django.contrib import admin
 from django.contrib.admin import ModelAdmin
 
-from apps.resume.models import Technology, Responsibility
 from apps.resume.models import Project
+from apps.resume.models import Responsibility
+from apps.resume.models import Technology
 
 
 @admin.register(Technology)

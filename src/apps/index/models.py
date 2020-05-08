@@ -7,7 +7,7 @@ class UserInfo(m.Model):
     greeting = m.TextField(null=True, blank=True)
 
     class Meta:
-        verbose_name_plural = 'User Info'
+        verbose_name_plural = "User Info"
 
     def __str__(self):
-        return f'User Info(id = {self.pk}, name = {self.name!r})'
+        return f"User Info(id = {self.pk}, name = {self.name!r})"
