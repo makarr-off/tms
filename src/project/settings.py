@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "applications.onboarding.apps.OnboardingConfig",
     "apps.index",
     "apps.resume",
 ]
